@@ -2,6 +2,21 @@
 
 {% block content %}
 
-This is our clan
+<b>Our clan:</b>
+
+{% for pet in pets %}
+    <div>
+        <br>Name: {{pet.name}}<br>
+        D.O.B.: {{pet.date_of_birth}}<br>
+        Type: {{pet.type}}<br>
+        Owner: {{pet.owner}}<br>
+        Treatment notes: {{pet.notes}}<br>
+        Vet: {{pet.vet}}
+    </div>
+    
+
+{% endfor %}
+
+
 
 {% endblock %}
