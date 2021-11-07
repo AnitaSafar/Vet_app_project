@@ -9,7 +9,7 @@ An animal is registered with only one vet.
 * The practice wants to be able to register / track animals.
 * Important information for the vets to know is - Name, Date Of Birth (use a VARCHAR initially), Type of animal, Contact details for the owner, Treatment notes
 * Be able to assign animals to vets
-* CRUD actions for vets / animals - remember the user - what would they want to see on each View? What Views should there be?
+* CRUD actions for vets / animals - remember the user - what would they want to see on each View? What Views should there be? #### all crud actions?
 
 # Possible Extensions
 * Mark owners as being registered/unregistered with the Vet. unregistered owners won't be able to add any more animals.
