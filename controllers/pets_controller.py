@@ -39,3 +39,9 @@ def add_new_pet():
 def show_pet(id):
     pet = pet_repository.select(id)
     return render_template('clan/show.html', pet = pet)
+
+@pets_blueprint.route("/clan/<id>/edit")
+def edit_pet(id):
+    pet = pet_repository.select(id)
+    vets = vet_repository.select_all()
+    return render_template('clan/edit.html', pet = pet, vets = vets)
