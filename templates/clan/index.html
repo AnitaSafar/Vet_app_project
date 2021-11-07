@@ -2,16 +2,17 @@
 
 {% block content %}
 
-<b>Our clan:</b>
+<h2><b>Our clan:</b></h2>
 
 {% for pet in pets %}
     <div>
-        <br>Name: {{pet.name}}<br>
+        <br>Name: 
+        <a href="/clan/{{pet.id}}">{{pet.name}}</a><br>
         Date of birth: {{pet.date_of_birth}}<br>
         Type: {{pet.type}}<br>
         Owner: {{pet.owner}}<br>
         Treatment notes: {{pet.notes}}<br>
-        Vet: {{ pet.vet.id }}<br>
+        Vet: {{ pet.vet.name }}<br>
         
     </div>
     

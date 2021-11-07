@@ -34,3 +34,8 @@ def add_new_pet():
     pet = Pet(name, date_of_birth, type, owner, notes, vet)
     pet_repository.save(pet)
     return redirect('/clan')
+
+@pets_blueprint.route("/clan/<id>")
+def show_pet(id):
+    pet = pet_repository.select(id)
+    return render_template('clan/show.html', pet = pet)
