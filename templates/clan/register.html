@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/clan" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required autofocus>
+    </div>
+  
+    <div>
+      <label for="dob">D.O.B.:</label>
+      <input type="text" id="dob" name="dob" required>
+    </div>
+
+    <div>
+        <label for="type">Type of animal:</label>
+        <input type="text" id="type" name="type" required>
+    </div>
+
+    <div>
+        <label for="owner">Contact details for the owner:</label>
+        <input type="text" id="owner" name="owner" required>
+    </div>
+
+    <div>
+        <label for="notes">Treatment notes:</label>
+        <input type="text" id="notes" name="notes" required>
+    </div>
+    <div>
+      <label for="vet">Vet:</label>
+      <select id="vet" name="vet_id">
+        {% for vet in vets %}
+          <option value="{{ vet.id }}">{{ vet.name }}</option>
+        {% endfor %}
+      </select>
+    </div><br>
+  
+    <button type="submit">Add Pet</button>
+  
+  </form>
+
+{% endblock %}

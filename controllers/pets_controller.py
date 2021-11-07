@@ -15,3 +15,8 @@ def our_clan():
 def vets():
     vets = vet_repository.select_all()
     return render_template("vets/index.html", vets = vets)
+
+@pets_blueprint.route("/register")
+def register():
+    vets = vet_repository.select_all()
+    return render_template("clan/register.html", vets = vets)
