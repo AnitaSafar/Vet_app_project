@@ -2,7 +2,15 @@
 
 {% block content %}
 
-Our vets
+<b>Our vets:</b>
+
+{% for vet in vets %}
+    <div>
+        <br>Name: {{vet.name}}<br>
+
+    </div>
+
+{% endfor %}
 
 
 {% endblock %}
