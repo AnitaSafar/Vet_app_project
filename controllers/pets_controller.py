@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request, redirect
 from flask import Blueprint
 from models.pet import Pet
 from models.vet import Vet
@@ -20,3 +20,17 @@ def vets():
 def register():
     vets = vet_repository.select_all()
     return render_template("clan/register.html", vets = vets)
+
+@pets_blueprint.route("/clan", methods=['POST'])
+def add_new_pet():
+    name = request.form['name']
+    date_of_birth = request.form['date_of_birth']
+    type = request.form['type']
+    owner = request.form['owner']
+    notes = request.form['notes']
+    vet_id = request.form['vet_id']
+    
+    vet = vet_repository.select(vet_id)
+    pet = Pet(name, date_of_birth, type, owner, notes, vet)
+    pet_repository.save(pet)
+    return redirect('/clan')

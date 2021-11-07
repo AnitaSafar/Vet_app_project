@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 
 from models.pet import Pet
+from models.vet import Vet
 from repositories import pet_repository, vet_repository
 
 def save(pet):
