@@ -1,7 +1,7 @@
 from db.run_sql import run_sql
 
 from models.pet import Pet
-import repositories
+from repositories import pet_repository
 
 def save(pet):
     sql = "INSERT INTO pets (name, date_of_birth, type, owner, notes, vet) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
@@ -25,3 +25,4 @@ def select_all():
         pet = Pet(row['name'], row['date_of_birth'], row['type'], row['owner'], row['notes'], row['vet'], row['id'])
         pets.append(pet)
     return pets
+
