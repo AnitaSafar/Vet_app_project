@@ -10,6 +10,12 @@
         <p>Treatment notes: {{pet.notes}}</p>
         <p>Vet: {{pet.vet.name}}</p>
         <p><a href="/clan/{{pet.id}}/edit">Change details</a></p>
+        
+    </div>
+    <div>
+        <form action="/clan/{{pet.id}}/delete" method="POST">
+            <button>Delete {{pet.name}}</button>
+        </form>
     </div>
 
 {% endblock %}

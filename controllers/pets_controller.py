@@ -59,3 +59,8 @@ def update_pet(id):
     pet = Pet(name, date_of_birth, type, owner, notes, vet, id)
     pet_repository.update(pet)
     return redirect('/clan')
+
+@pets_blueprint.route("/clan/<id>/delete", methods=['POST'])
+def delete_pet(id):
+    pet_repository.delete(id)
+    return redirect('/clan')
