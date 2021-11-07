@@ -13,5 +13,5 @@ CREATE TABLE pets (
     type VARCHAR(255),
     owner VARCHAR(255),
     notes VARCHAR(255),
-    vet VARCHAR(255)
+    vet_id INT REFERENCES vets(id)
 );

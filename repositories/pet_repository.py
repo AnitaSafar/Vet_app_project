@@ -1,11 +1,11 @@
 from db.run_sql import run_sql
 
 from models.pet import Pet
-from repositories import pet_repository
+from repositories import pet_repository, vet_repository
 
 def save(pet):
-    sql = "INSERT INTO pets (name, date_of_birth, type, owner, notes, vet) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [pet.name, pet.date_of_birth, pet.type, pet.owner, pet.notes, pet.vet]
+    sql = "INSERT INTO pets (name, date_of_birth, type, owner, notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [pet.name, pet.date_of_birth, pet.type, pet.owner, pet.notes, pet.vet.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     pet.id = id
@@ -22,7 +22,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        pet = Pet(row['name'], row['date_of_birth'], row['type'], row['owner'], row['notes'], row['vet'], row['id'])
+        vet = vet_repository.select(row['vet_id'])
+        pet = Pet(row['name'], row['date_of_birth'], row['type'], row['owner'], row['notes'], vet, row['id'])
         pets.append(pet)
     return pets
 
