@@ -34,3 +34,8 @@ def select(id):
     if result is not None:
         vet = Vet(result['name'], result['id'])
     return vet
+
+def delete(id):
+    sql = "DELETE FROM vets WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

@@ -8,10 +8,14 @@
         <p>Type of animal: {{pet.type}}</p>
         <p>Contact details for owner: {{pet.owner}}</p>
         <p>Treatment notes: {{pet.notes}}</p>
-        <p>Vet: {{pet.vet.name}}</p>
-        <p><a href="/clan/{{pet.id}}/edit">Change details</a></p>
-        
+        <p>Vet: {{pet.vet.name}}</p>        
     </div>
+    <div>
+        <form action="/clan/{{pet.id}}/edit">
+            <button>Change details</button>
+        </form>
+    </div>
+    <br>
     <div>
         <form action="/clan/{{pet.id}}/delete" method="POST">
             <button>Delete {{pet.name}}</button>

@@ -8,7 +8,12 @@
     <div>
         <br>Name: {{vet.name}}<br>
         ID: {{vet.id}}<br>
-
+    </div>
+    <div>
+        <form action="/vets/{{vet.id}}/delete" method="POST">
+            <button>Delete {{vet.name}}</button>
+        </form>
+        
     </div>
 
 {% endfor %}
