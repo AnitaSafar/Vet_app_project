@@ -11,11 +11,6 @@ def our_clan():
     pets = pet_repository.select_all()
     return render_template("clan/index.html", pets = pets)
 
-@pets_blueprint.route("/vets")
-def vets():
-    vets = vet_repository.select_all()
-    return render_template("vets/index.html", vets = vets)
-
 @pets_blueprint.route("/register")
 def register():
     vets = vet_repository.select_all()
@@ -65,7 +60,3 @@ def delete_pet(id):
     pet_repository.delete(id)
     return redirect('/clan')
 
-@pets_blueprint.route("/vets/<id>/delete", methods=['POST'])
-def delete_vet(id):
-    vet_repository.delete(id)
-    return redirect('/vets')
