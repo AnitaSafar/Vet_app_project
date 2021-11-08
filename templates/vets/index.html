@@ -6,14 +6,10 @@
 
 {% for vet in vets %}
     <div>
-        <br>Name: {{vet.name}}<br>
+        <br>Name: 
+        <a href="/vets/{{vet.id}}">{{vet.name}}</a><br>
         Specialty: {{vet.specialties}}<br>
         Registration number: {{vet.reg_number}}<br>
-    </div>
-    <div>
-        <form action="/vets/{{vet.id}}/delete" method="POST">
-            <button>Delete {{vet.name}}</button>
-        </form>
     </div>
 
 {% endfor %}

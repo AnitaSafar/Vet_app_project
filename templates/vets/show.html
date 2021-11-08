@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <p>Name: {{vet.name}}</p>
+    <p>Specialties: {{vet.specialties}}</p>
+    <p>Registration number: {{vet.reg_number}}</p>
+</div>
+<div>
+    <form action="/vets/{{vet.id}}">
+        <button>Edit details</button>
+    </form>
+</div>
+<br>
+<div>
+    <form action="/vets/{{vet.id}}/delete" method="POST">
+        <button>Delete {{vet.name}}</button>
+    </form>
+</div>
+{% endblock %}
