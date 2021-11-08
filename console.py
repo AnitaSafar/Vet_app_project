@@ -6,10 +6,10 @@ from repositories import pet_repository, vet_repository
 pet_repository.delete_all()
 vet_repository.delete_all()
 
-vet1 = Vet("John Dolittle")
+vet1 = Vet("John Dolittle", "Psychiatry", 3147)
 vet_repository.save(vet1)
 
-vet2 = Vet("Stephen Strange")
+vet2 = Vet("Stephen Strange", "Neurology", 11895)
 vet_repository.save(vet2)
 
 vet_repository.select_all()

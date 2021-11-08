@@ -3,7 +3,9 @@ DROP TABLE IF EXISTS vets;
 
 CREATE TABLE vets (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    specialties VARCHAR(255),
+    reg_number INT
 );
 
 CREATE TABLE pets (

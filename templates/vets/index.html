@@ -7,7 +7,8 @@
 {% for vet in vets %}
     <div>
         <br>Name: {{vet.name}}<br>
-        ID: {{vet.id}}<br>
+        Specialty: {{vet.specialties}}<br>
+        Registration number: {{vet.reg_number}}<br>
     </div>
     <div>
         <form action="/vets/{{vet.id}}/delete" method="POST">
@@ -17,7 +18,7 @@
 
 {% endfor %}
 
-<div>
+<br><div>
     <form action="/vets/new">
        <button>Add new vet</button></form>
 </div>
