@@ -13,10 +13,13 @@
         <form action="/vets/{{vet.id}}/delete" method="POST">
             <button>Delete {{vet.name}}</button>
         </form>
-        
     </div>
 
 {% endfor %}
 
+<div>
+    <form action="/vets/new">
+       <button>Add new vet</button></form>
+</div>
 
 {% endblock %}

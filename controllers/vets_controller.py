@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template, redirect, request
 from models.vet import Vet
-from repositories import vet_repository
+from repositories import vet_repository, pet_repository
 
 vets_blueprint = Blueprint("vets", __name__)
 
@@ -14,3 +14,14 @@ def delete_vet(id):
     vet_repository.delete(id)
     return redirect('/vets')
 
+@vets_blueprint.route("/vets/new")
+def new_vet():
+    return render_template("vets/new.html")
+
+@vets_blueprint.route("/vets", methods=['POST'])
+def add_new_vet():
+    name = request.form['name']
+
+    vet = Vet(name)
+    vet_repository.save(vet)
+    return redirect('/vets')
