@@ -16,3 +16,5 @@ class TestVet(unittest.TestCase):
 
     def test_vet_has_reg_number(self):
         self.assertEqual(3147, self.vet.reg_number)
+
+        

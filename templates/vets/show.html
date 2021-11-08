@@ -2,10 +2,18 @@
 
 {% block content %}
 
+<h2>{{vet.name}}'s details:</h2>
+
 <div>
     <p>Name: {{vet.name}}</p>
     <p>Specialties: {{vet.specialties}}</p>
     <p>Registration number: {{vet.reg_number}}</p>
+    <p>Patients:
+        
+            {% for pet in pets %}
+            {{pet.name}}
+            {% endfor %}
+    </p>
 </div>
 <div>
     <form action="/vets/{{vet.id}}/edit">

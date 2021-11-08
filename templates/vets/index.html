@@ -6,10 +6,9 @@
 
 {% for vet in vets %}
     <div>
-        <br>Name: 
+        <br>Name:
         <a href="/vets/{{vet.id}}">{{vet.name}}</a><br>
         Specialty: {{vet.specialties}}<br>
-        Registration number: {{vet.reg_number}}<br>
     </div>
 
 {% endfor %}

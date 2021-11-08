@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
-
 from models.vet import Vet
+from models.pet import Pet
 
 def save(vet):
     sql = "INSERT INTO vets (name, specialties, reg_number) VALUES (%s, %s,%s) RETURNING *"
@@ -44,3 +44,15 @@ def update(vet):
     sql = "UPDATE vets SET (name, specialties, reg_number) = (%s, %s, %s) WHERE id = %s"
     values = [vet.name, vet.specialties, vet.reg_number, vet.id]
     run_sql(sql ,values)
+
+def pets(vet):
+    pets = []
+
+    sql = "SELECT * FROM pets WHERE vet_id = %s"
+    values = [vet.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        pet = Pet(row['name'], row['date_of_birth'], row['type'], row['owner'], row['notes'], row['id'])
+        pets.append(pet)
+    return pets

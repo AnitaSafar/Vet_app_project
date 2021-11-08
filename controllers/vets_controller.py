@@ -31,7 +31,8 @@ def add_new_vet():
 @vets_blueprint.route("/vets/<id>")
 def show_vet(id):
     vet = vet_repository.select(id)
-    return render_template('vets/show.html', vet = vet)
+    pets = vet_repository.pets(vet)
+    return render_template('vets/show.html', vet = vet, pets = pets)
 
 @vets_blueprint.route("/vets/<id>/edit")
 def edit_vet(id):
@@ -48,3 +49,5 @@ def update_vet(id):
     vet = Vet(name, specialties, reg_number, id)
     vet_repository.update(vet)
     return redirect('/vets')
+
+
