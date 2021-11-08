@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/vets/{{vet.id}}" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{vet.name}}">
+    </div>
+    <div>
+        <label for="specialties">Specialties:</label>
+        <input type="text" id="specialties" name="specialties" value="{{vet.specialties}}">
+    </div>
+    <div>
+        <label for="reg_number">Registration number:</label>
+        <input type="text" id="reg_number" name="reg_number" value="{{vet.reg_number}}">
+    </div>
+    <button type="submit">Update details</button>
+ </form>
+  
+
+ {% endblock %}

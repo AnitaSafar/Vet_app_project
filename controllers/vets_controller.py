@@ -32,3 +32,19 @@ def add_new_vet():
 def show_vet(id):
     vet = vet_repository.select(id)
     return render_template('vets/show.html', vet = vet)
+
+@vets_blueprint.route("/vets/<id>/edit")
+def edit_vet(id):
+    vet = vet_repository.select(id)
+    pets = pet_repository.select_all()
+    return render_template('vets/edit.html', vet = vet, pets = pets)    
+
+@vets_blueprint.route("/vets/<id>", methods=['POST'])
+def update_vet(id):
+    name = request.form['name']
+    specialties = request.form['specialties']
+    reg_number = request.form['reg_number']
+
+    vet = Vet(name, specialties, reg_number, id)
+    vet_repository.update(vet)
+    return redirect('/vets')
