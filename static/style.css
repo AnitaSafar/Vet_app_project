@@ -1,0 +1,37 @@
+
+body {  
+    margin: 30px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: navy;
+    flex: content;
+}
+
+nav {
+    padding: 20px;
+    margin: 20px;
+    padding-right: 25px;
+    justify-content: center;
+}
+
+body > header {
+    color: brown;
+}
+
+body > footer {
+    color: brown;
+}
+
+.h2 {
+    color: brown;
+}
+
+body > div > img {
+    width: 400px;
+    height: 300px;
+    align-content: center;
+}
+
+.content {
+    align-content: center;
+}
