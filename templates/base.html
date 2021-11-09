@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='clan.css') }}">
   <title>Vet for your Pet</title>
 </head>
-<body>
-  <header>
+<body id="grid-container">
+  <header id="header">
     <h1>Vet for your Pet</h1>
+  </header> 
+  <div id="menu">
     <nav>
-      <ul class="menu">
+      <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/clan">Our clan</a></li>
         <li><a href="/register">Register new pet</a></li>
         <li><a href="/vets">Vets</a></li>
       </ul>
     </nav>
-  </header>
-  <div class="content">
+  </div>
+  <div id="main-content">
     {% block content %}
     {% endblock %}
   </div>
-  <footer>
+  <footer id="footer">
     <p>Vet for your Pet</p>
   </footer>
 </body>

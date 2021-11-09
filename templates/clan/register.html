@@ -2,32 +2,33 @@
 
 {% block content %}
 
-<h2 class="h2"><b>Register new pet:</b></h2>
-<form action="/clan" method="post">
+<h2><b>Register new pet:</b></h2>
+<div id="register">
+  <form id="form" action="/clan" method="post">
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Name" required autofocus>
-    </div>
+    </div><br>
   
     <div>
       <label for="date_of_birth">Date of birth:</label>
       <input type="text" id="date_of_birth" name="date_of_birth" placeholder="YYYY/MM/DD" required>
-    </div>
+    </div><br>
 
     <div>
         <label for="type">Type of animal:</label>
         <input type="text" id="type" name="type" placeholder="Add type" required>
-    </div>
+    </div><br>
 
     <div>
         <label for="owner">Contact details for the owner:</label>
         <input type="text" id="owner" name="owner" placeholder="Owner details" required>
-    </div>
+    </div><br>
 
     <div>
         <label for="notes">Treatment notes:</label>
         <input type="text" id="notes" name="notes" placeholder="Add notes" required>
-    </div>
+    </div><br>
     <div>
       <label for="vet">Vet:</label>
       <select id="vet" name="vet_id">
@@ -37,8 +38,8 @@
       </select>
     </div><br>
   
-    <button type="submit">Add Pet</button>
+    <button id="add_pet" type="submit">Add Pet</button>
   
   </form>
-
+</div>
 {% endblock %}

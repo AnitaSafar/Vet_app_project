@@ -2,23 +2,24 @@
 
 {% block content %}
 
-<h2 class="h2"><b>Our clan:</b></h2>
-
-{% for pet in pets %}
-    <div>
-        <br>Name: 
-        <a href="/clan/{{pet.id}}">{{pet.name}}</a><br>
-        Date of birth: {{pet.date_of_birth}}<br>
-        Type: {{pet.type}}<br>
-        Owner: {{pet.owner}}<br>
-        Treatment notes: {{pet.notes}}<br>
-        Vet: {{ pet.vet.name }}<br>
+<h2><b>Our clan:</b></h2>
+<div class="flex-pets">
+    {% for pet in pets %}
+        <div class="pets">
+            <br>Name: 
+            <a href="/clan/{{pet.id}}">{{pet.name}}</a><br>
+            Date of birth: {{pet.date_of_birth}}<br>
+            Type: {{pet.type}}<br>
+            Owner: {{pet.owner}}<br>
+            Treatment notes: {{pet.notes}}<br>
+            Vet: {{ pet.vet.name }}<br>
         
-    </div>
-    
+        </div>
+    {% endfor %}
+</div>
     
 
-{% endfor %}
+
 
 
 
