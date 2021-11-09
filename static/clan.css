@@ -27,3 +27,18 @@
 #add_pet {
     float:right;
 }
+
+#show {
+    padding-left: 60px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.button {
+    padding: 20px;
+}

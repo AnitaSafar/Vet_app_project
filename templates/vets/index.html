@@ -5,7 +5,7 @@
 <h2><b>Our vets:</b></h2>
 
 {% for vet in vets %}
-    <div>
+    <div class="vets">
         <br>Name:
         <a href="/vets/{{vet.id}}">{{vet.name}}</a><br>
         Specialty: {{vet.specialties}}<br>
@@ -13,9 +13,9 @@
 
 {% endfor %}
 
-<br><div>
+<br><div class="vets">
     <form action="/vets/new">
-       <button>Add new vet</button></form>
+       <button>+ Add new vet</button></form>
 </div>
 
 {% endblock %}

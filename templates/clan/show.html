@@ -4,7 +4,7 @@
 
 <h2><b>{{pet.name}}'s details:</b></h2>
 
-<div>
+<div id="show">
     <br><p>Name: {{pet.name}}</p>
     <p>Date of birth: {{pet.date_of_birth}}</p>
     <p>Type of animal: {{pet.type}}</p>
@@ -12,16 +12,17 @@
     <p>Treatment notes: {{pet.notes}}</p>
     <p>Vet: {{pet.vet.name}}</p>        
 </div>
-<div>
-    <form action="/clan/{{pet.id}}/edit">
-        <button>Change details</button>
-    </form>
+<div id="buttons">
+    <div class="button">
+        <form action="/clan/{{pet.id}}/edit">
+            <button>Change details</button>
+        </form>
+    </div>
+    <br>
+    <div class="button">
+        <form action="/clan/{{pet.id}}/delete" method="POST">
+            <button>Delete {{pet.name}}</button>
+        </form>
+    </div>
 </div>
-<br>
-<div>
-    <form action="/clan/{{pet.id}}/delete" method="POST">
-        <button>Delete {{pet.name}}</button>
-    </form>
-</div>
-
 {% endblock %}

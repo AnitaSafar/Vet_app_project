@@ -36,11 +36,10 @@ h2 {
     color: brown;
 }
 
-body > div > img {
-    width: 500px;
-    height: 400px;
-    align-content: center;
-    padding-top: 100px;
+#img {
+    width: 400px;
+    height: 300px;
+    padding-top: 200px;   
 }
 
 
