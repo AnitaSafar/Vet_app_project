@@ -3,8 +3,8 @@
 {% block content %}
 
 <h2><b>Register new pet:</b></h2>
-<div id="register">
-  <form id="form" action="/clan" method="post">
+<div class="new">
+  <form class="form" action="/clan" method="post">
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Name" required autofocus>
@@ -22,12 +22,12 @@
 
     <div>
         <label for="owner">Contact details for the owner:</label>
-        <input type="text" id="owner" name="owner" placeholder="Owner details" required>
+        <input type="text" id="owner_new" name="owner" placeholder="Owner details" required>
     </div><br>
 
     <div>
         <label for="notes">Treatment notes:</label>
-        <input type="text" id="notes" name="notes" placeholder="Add notes" required>
+        <input type="text" id="notes_new" name="notes" placeholder="Add notes" required>
     </div><br>
     <div>
       <label for="vet">Vet:</label>
@@ -38,7 +38,7 @@
       </select>
     </div><br>
   
-    <button id="add_pet" type="submit">Add Pet</button>
+    <button class="save_button" type="submit">Add Pet</button>
   
   </form>
 </div>

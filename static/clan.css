@@ -9,36 +9,21 @@
     border-radius: 30px;
     border-color:  darkgreen;
     margin: 10px;
+    background-color: rgb(219, 219, 219);
 }
 
-#register {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 'form form';
+#owner {
+    width: 550px;
 }
 
-#form {
-    padding: 20px;
-    border-style: dotted;
-    width: 500px;
-    grid-area: form;
+#notes {
+    width: 637px;
 }
 
-#add_pet {
-    float:right;
+#owner_new {
+    width: 390px;
 }
 
-#show {
-    padding-left: 60px;
-}
-
-#buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 20px;
-}
-
-.button {
-    padding: 20px;
+#notes_new {
+    width: 525px;
 }

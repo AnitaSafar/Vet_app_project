@@ -4,26 +4,27 @@
 
 <h2><b>{{vet.name}}'s details:</b></h2>
 
-<div>
+<div class="details">
     <p>Name: {{vet.name}}</p>
     <p>Specialties: {{vet.specialties}}</p>
     <p>Registration number: {{vet.reg_number}}</p>
     <p>Patients:
-        
             {% for pet in pets %}
             {{pet.name}}
             {% endfor %}
     </p>
 </div>
-<div>
-    <form action="/vets/{{vet.id}}/edit">
-        <button>Edit details</button>
-    </form>
-</div>
-<br>
-<div>
-    <form action="/vets/{{vet.id}}/delete" method="POST">
-        <button>Delete {{vet.name}}</button>
-    </form>
+<div class="show_buttons">
+    <div>
+        <form action="/vets/{{vet.id}}/edit">
+            <button class="show_button">Edit details</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <form action="/vets/{{vet.id}}/delete" method="POST">
+            <button class="delete_button">Delete {{vet.name}}</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

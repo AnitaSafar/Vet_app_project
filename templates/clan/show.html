@@ -4,24 +4,24 @@
 
 <h2><b>{{pet.name}}'s details:</b></h2>
 
-<div id="show">
-    <br><p>Name: {{pet.name}}</p>
+<div class="details"><br>
+    <p>Name: {{pet.name}}</p>
     <p>Date of birth: {{pet.date_of_birth}}</p>
     <p>Type of animal: {{pet.type}}</p>
     <p>Contact details for owner: {{pet.owner}}</p>
     <p>Treatment notes: {{pet.notes}}</p>
     <p>Vet: {{pet.vet.name}}</p>        
 </div>
-<div id="buttons">
-    <div class="button">
+<div class="show_buttons">
+    <div >
         <form action="/clan/{{pet.id}}/edit">
-            <button>Change details</button>
+            <button class="show_button">Change details</button>
         </form>
     </div>
     <br>
-    <div class="button">
+    <div>
         <form action="/clan/{{pet.id}}/delete" method="POST">
-            <button>Delete {{pet.name}}</button>
+            <button class="delete_button">Delete {{pet.name}}</button>
         </form>
     </div>
 </div>

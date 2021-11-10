@@ -4,18 +4,19 @@
 
 <h2><b>Our vets:</b></h2>
 
+<div>
+    <form action="/vets/new">
+       <button id="add_new_button">+ Add new vet</button></form>
+</div><br>
+
 {% for vet in vets %}
-    <div class="vets">
-        <br>Name:
-        <a href="/vets/{{vet.id}}">{{vet.name}}</a><br>
-        Specialty: {{vet.specialties}}<br>
+    <div class="vets"><br>
+        <p>Name: 
+            <a id="names" href="/vets/{{vet.id}}">{{vet.name}}</a>
+        </p><br>
+        <p>Specialty: {{vet.specialties}}</p><br>
     </div>
 
 {% endfor %}
-
-<br><div class="vets">
-    <form action="/vets/new">
-       <button>+ Add new vet</button></form>
-</div>
 
 {% endblock %}

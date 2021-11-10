@@ -4,47 +4,48 @@
 
 <h2><b>{{pet.name}}'s details:</b></h2>
 
-<form id="show" action="/clan/{{pet.id}}" method="post">
-  <div>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{pet.name}}" required autofocus>
-  </div><br>
-  
-  <div>
-    <label for="date_of_birth">Date of birth:</label>
-    <input type="text" id="date_of_birth" name="date_of_birth" value="{{pet.date_of_birth}}" required>
-  </div><br>
+<div class="details"><br>
+  <form class="edit" action="/clan/{{pet.id}}" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="{{pet.name}}" required>
+    </div><br>
+    
+    <div>
+      <label for="date_of_birth">Date of birth:</label>
+      <input type="text" id="date_of_birth" name="date_of_birth" value="{{pet.date_of_birth}}" required>
+    </div><br>
 
-  <div>
-      <label for="type">Type of animal:</label>
-      <input type="text" id="type" name="type" value="{{pet.type}}" required>
-  </div><br>
+    <div>
+        <label for="type">Type of animal:</label>
+        <input type="text" id="type" name="type" value="{{pet.type}}" required>
+    </div><br>
 
-  <div>
-      <label for="owner">Contact detail for owner:</label>
-      <input type="text" id="owner" name="owner" value="{{pet.owner}}" required>
-  </div><br>
+    <div>
+        <label for="owner">Contact detail for owner:</label>
+        <input type="text" id="owner" name="owner" value="{{pet.owner}}" required>
+    </div><br>
 
-  <div>
-      <label for="notes">Treatment notes:</label>
-      <input type="text" id="notes" name="notes" value="{{pet.notes}}" required>
-  </div><br>
-  
-  <div>
-    <label for="vet">Vet:</label>
-    <select id="vet" name="vet_id">
-      {% for vet in vets %}
-        <option value="{{ vet.id }}"
-        {% if pet.vet.id == vet.id %} selected="selected"{% endif %}>
-            {{ vet.name }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
-  <br>
-  <div id="buttons">
-    <button type="submit">Update {{pet.name}}'s details</button>
-  </div>
+    <div>
+        <label for="notes">Treatment notes:</label>
+        <input type="text" id="notes" name="notes" value="{{pet.notes}}" required>
+    </div><br>
+    
+    <div>
+      <label for="vet">Vet:</label>
+      <select id="vet" name="vet_id">
+        {% for vet in vets %}
+          <option value="{{ vet.id }}"
+          {% if pet.vet.id == vet.id %} selected="selected"{% endif %}>
+              {{ vet.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div><br>
+    
+    <button class="update_button" type="submit">Update {{pet.name}}'s details</button>
+
   </form>
+</div>
 
 {% endblock %}

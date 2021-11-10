@@ -1,0 +1,73 @@
+.new {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 'form form';
+}
+
+.form {
+    padding: 30px;
+    border-style: dotted;
+    border-radius: 50px;
+    width: 700px;
+    grid-area: form;
+    background-color: lightsteelblue;
+}
+
+.save_button {
+    float: right;
+    padding: 10px;
+    background-color: rgb(166, 204, 166);
+    border-width: medium;
+    border-radius: 30px;
+    border-color: rgb(7, 7, 53);
+    font-size: medium;
+}
+
+.details {
+    padding: 10px;
+    background-color: lightsteelblue;
+    border-radius: 30px;
+}
+
+.show_buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-radius: 30px;
+}
+
+.show_button {
+    background-color: rgb(166, 204, 166);
+    border-width: medium;
+    border-radius: 30px;
+    border-color: rgb(7, 7, 53);
+    font-size: medium;
+}
+
+.update_button {
+    margin: 20px;
+    float: left;
+    background-color: rgb(166, 204, 166);
+    border-width: medium;
+    border-radius: 30px;
+    border-color: rgb(7, 7, 53);
+    font-size: medium;
+}
+
+.delete_button {
+    background-color: rgb(209, 125, 104);
+    border-width: medium;
+    border-radius: 30px;
+    border-color: rgb(7, 7, 53);
+    font-size: medium;
+}
+
+.edit {
+    background-color: lightsteelblue;
+}
+
+#names {
+    font-weight: bold;
+    color: darkgreen;
+}
