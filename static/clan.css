@@ -1,15 +1,16 @@
-.flex-pets {
+#flex-pets {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pets {
     padding: 20px;
-    flex: 1;
     border-style: double;
     border-radius: 30px;
     border-color:  darkgreen;
     margin: 10px;
     background-color: rgb(219, 219, 219);
+    flex: 25%;
 }
 
 #owner {

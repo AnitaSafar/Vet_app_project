@@ -1,23 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="clan">
-<h2><b>Our clan:</b></h2>
+<div>
+    <h2><b>Our clan:</b></h2>
 
-<div class="flex-pets">
-    {% for pet in pets %}
-        <div class="pets">
-            <div>
-                <p>Name: <a id="names" href="/clan/{{pet.id}}">{{pet.name}}</a></p>
-                <p>Date of birth: {{pet.date_of_birth}}</p>
-                <p>Type: {{pet.type}}</p>
-                <p>Owner: {{pet.owner}}</p>
-                <p>Treatment notes: {{pet.notes}}</p>
-                <p>Vet: {{ pet.vet.name }}</p>
+    <div id="flex-pets">
+        {% for pet in pets %}
+            <div class="pets">
+                <div>
+                    <p>Name: 
+                        <a id="names" href="/clan/{{pet.id}}">{{pet.name}}</a></p>
+                    <p>Date of birth: {{pet.date_of_birth}}</p>
+                    <p>Type: {{pet.type}}</p>
+                    <p>Owner: {{pet.owner}}</p>
+                    <p>Treatment notes: {{pet.notes}}</p>
+                    <p>Vet: {{ pet.vet.name }}</p>
+                </div>
             </div>
-        </div>
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
 </div>    
 
 

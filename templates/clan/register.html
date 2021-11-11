@@ -3,6 +3,7 @@
 {% block content %}
 
 <h2><b>Register new pet:</b></h2>
+
 <div class="new">
   <form class="form" action="/clan" method="post">
     <div>
@@ -16,19 +17,20 @@
     </div><br>
 
     <div>
-        <label for="type">Type of animal:</label>
-        <input type="text" id="type" name="type" placeholder="Add type" required>
+      <label for="type">Type of animal:</label>
+      <input type="text" id="type" name="type" placeholder="Add type" required>
     </div><br>
 
     <div>
-        <label for="owner">Contact details for the owner:</label>
-        <input type="text" id="owner_new" name="owner" placeholder="Owner details" required>
+      <label for="owner">Contact details for the owner:</label>
+      <input type="text" id="owner_new" name="owner" placeholder="Owner details" required>
     </div><br>
 
     <div>
-        <label for="notes">Treatment notes:</label>
-        <input type="text" id="notes_new" name="notes" placeholder="Add notes" required>
+      <label for="notes">Treatment notes:</label>
+      <input type="text" id="notes_new" name="notes" placeholder="Add notes" required>
     </div><br>
+    
     <div>
       <label for="vet">Vet:</label>
       <select id="vet" name="vet_id">

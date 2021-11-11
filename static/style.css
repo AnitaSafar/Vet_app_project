@@ -7,13 +7,14 @@ body {
     color: rgb(7, 7, 53);
 }
 
-header {
+#header {
     text-align: center;
     color: rgb(7, 7, 53);
     grid-area: header;
     font-weight: bold;
     font-size: large;
     background-color: rgb(155, 192, 155);
+    border-radius: 30px;
 }
 
 #menu {
@@ -38,7 +39,7 @@ body > div > nav > ul > li > a {
     grid-area: main;
     height: 800px;
     background-image: url('/static/images/background.png');
-    background-size: cover;
+    background-size: center;
 }
 
 h2 {

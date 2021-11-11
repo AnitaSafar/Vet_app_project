@@ -9,18 +9,21 @@
     <p>Specialties: {{vet.specialties}}</p>
     <p>Registration number: {{vet.reg_number}}</p>
     <p>Patients:
+        <ul>
             {% for pet in pets %}
-            {{pet.name}}
+           <li>{{pet.name}}</li> 
             {% endfor %}
+        </ul>       
     </p>
 </div>
+
 <div class="show_buttons">
     <div>
         <form action="/vets/{{vet.id}}/edit">
             <button class="show_button">Edit details</button>
         </form>
-    </div>
-    <br>
+    </div><br>
+    
     <div>
         <form action="/vets/{{vet.id}}/delete" method="POST">
             <button class="delete_button">Delete {{vet.name}}</button>

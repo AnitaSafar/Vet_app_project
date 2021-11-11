@@ -10,12 +10,12 @@
 </div><br>
 
 {% for vet in vets %}
-    <div class="vets"><br>
-        <p>Name: 
-            <a id="names" href="/vets/{{vet.id}}">{{vet.name}}</a>
-        </p><br>
-        <p>Specialty: {{vet.specialties}}</p><br>
-    </div>
+<div class="vets"><br>
+    <p>Name: 
+        <a id="names" href="/vets/{{vet.id}}">{{vet.name}}</a>
+    </p><br>
+    <p>Specialty: {{vet.specialties}}</p><br>
+</div>
 
 {% endfor %}
 
