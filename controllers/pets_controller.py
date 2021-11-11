@@ -1,7 +1,6 @@
 from flask import render_template, request, redirect
 from flask import Blueprint
 from models.pet import Pet
-from models.vet import Vet
 from repositories import pet_repository, vet_repository
 
 pets_blueprint = Blueprint("pets", __name__)
