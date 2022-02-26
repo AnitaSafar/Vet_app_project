@@ -1,15 +1,12 @@
-## Vet_app_project
+## Vet for your pet 
+![](https://raw.githubusercontent.com/AnitaSafar/Vet_app_project/blob/main/static/images/Vet_logo.png)
 
-## Vet Management App
-A veterinary practice has approached you to build a web application to help them manage their animals and vets. 
-A vet may look after many animals at a time. 
-An animal is registered with only one vet.
+## About 
+A vet management app for veterinary practice to help them manage their animals and vets. The user can assign multiple animals to a vet, but an animal can only be registered with one vet. The user is able to register new animals, look at their details, update the details and delete animals if necessary.
 
-# MVP
-* The practice wants to be able to register / track animals.
-* Important information for the vets to know is - Name, Date Of Birth (use a VARCHAR initially), Type of animal, Contact details for the owner, Treatment notes
-* Be able to assign animals to vets
-* CRUD actions for vets / animals - remember the user - what would they want to see on each View? What Views should there be?
+## Home 
+![](https://raw.githubusercontent.com/AnitaSafar/Vet_app_project/blob/main/demo/home.png)
+
 
 # Possible Extensions
 * Mark owners as being registered/unregistered with the Vet. unregistered owners won't be able to add any more animals.
