@@ -1,5 +1,5 @@
 ## Vet for your pet 
-![](https://raw.githubusercontent.com/AnitaSafar/Vet_app_project/main/static/images/Vet_logo.png)
+![](https://raw.githubusercontent.com/AnitaSafar/Vet_app_project/main/static/images/Vet_logo.png =200x200)
 
 ## About 
 A vet management app for veterinary practice to help them manage their animals and vets. The user can assign multiple animals to a vet, but an animal can only be registered with one vet. The user is able to register new animals, look at their details, update the details and delete animals if necessary.
