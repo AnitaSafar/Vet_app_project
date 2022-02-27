@@ -41,10 +41,12 @@ flask run
 
 ### Creating the database:
 To get the application to connect to the database, you will need to create that database:
-createdb -d vet_management
+
+    createdb -d vet_management
 
 Then creating the tables within the database:
-psql -d vet_management -f db/vet_management.sql
+
+    psql -d vet_management -f db/vet_management.sql
 
 ## Built with
 - Python
